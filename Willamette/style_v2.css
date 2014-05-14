@@ -1,0 +1,415 @@
+* {
+	/*font-family: Trebuchet MS;*/
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif
+	font-size: 13px;
+	padding: 0px;
+	margin: 0px;
+}
+
+body {
+	margin: 0px;
+	background-image: url('bkgd.png');
+	background-repeat: repeat-x;
+	background-color: #000;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+.container {
+	background-color: #FFF;
+}
+
+
+/*
+***************************************    
+**  General Formating                **
+***************************************
+*/
+a {
+	text-decoration:none;
+}
+
+a:hover{
+	text-decoration:underline;	
+}
+.boldCell{
+	font-weight:bold;	
+}
+
+
+/*
+***************************************    
+**  Front Page Event Links           **
+***************************************
+*/
+.eventLinks a{
+	display:inline-block;
+	font-size: 15px;
+	width: 48%;
+	padding: 5px 2px;
+	margin:0 2px 5px 0px;
+	text-align: center;
+	background-color: #98002e;
+	color: #ffffff;
+}
+.eventLinks a:hover{
+	text-decoration:none;
+	background-color: #afa081;
+	color: #ffffff;
+	background-image: url('bkgd.png');
+}
+.eventLinks h3 {
+	text-transform: uppercase;
+	color: #98002e;
+	padding: 10px 0;
+	font-weight: normal;
+    margin:10;
+    padding:0;
+}
+.eventResults{
+	width:98%;
+	margin:0 auto;
+}
+.scheduleTitle {
+	font-size: 15px;
+	color: #98002e;
+	font-weight: bold;
+}
+
+.time, .heats, .results{
+	width: 100px;
+}
+.homeContainerLeft{
+	float: left;
+	width: 45%;
+	margin: 0 0 0 10px;
+}
+.homeContainerRight{
+	float: right;
+	width: 45%;
+	margin: 0 10px 0 0;
+}
+.homeContainerRight h2, .homeContainerLeft h2, .session-tables h4{
+		font-size: 15px;
+	color: #98002e;
+	font-weight: bold;
+}
+
+/*
+***************************************    
+**  Results                          **
+***************************************
+*/
+#results h3{
+	font-size: 32px;
+	color: #98002e;
+	margin: 20px 0 10px 15px;
+	text-transform:uppercase;
+	font-weight: 900;
+}
+#results h4 {
+	text-transform: uppercase;
+}
+
+#results table table{
+  
+}
+
+#results table table td, #results table table th {
+	width:50px;
+	padding:0;
+	text-align: center;
+    font-size:10px;
+    border-left: 1px solid #afa081;
+}
+#results table table {
+    border-right: 1px solid #afa081;
+}
+
+
+/*
+***************************************    
+**  Results: Vertical Field Series   **
+***************************************
+*/
+.vertTable{
+	border:none;
+	padding:0px;
+	margin:0px;
+	border-collapse:collapse;
+	
+	
+}
+.vertTable th{
+	font-size: 10px;
+	background-color:#555;
+	color:#fff;
+    text-align:center;
+    padding:2px 0;
+    font-weight:normal;
+}
+.vertTable td{
+	font-size: 10px;
+    text-align:center;
+    padding:2px 0;
+}
+.vertTable .best-height{
+	background-color: yellow;
+}
+
+
+/*
+***************************************    
+**  Header                           **
+***************************************
+*/
+.header {
+	border-bottom: 1px solid #afa081;
+	padding: 10px 0;
+	background-color: #98002e;
+    
+}
+.header h3{
+	margin: 0;
+	padding: 10px 0 0 0;
+	color: #fff;
+	text-align: right;
+	text-transform: uppercase;
+	font-size: 30px;
+	font-weight: 900;
+}
+.header h4 {
+	margin: 0;
+	padding: 0;
+	font-size: 15px;
+	text-align: right;
+	color:#afa081;
+}
+.header h5 {
+	margin: 0;
+	padding: 4px 0 10px 0;
+	color: #fff;
+	text-align: right;
+	font-size: 15px;
+	font-style: italic;
+}
+
+.header img.logo {
+	width: 300px;
+	display: block;
+	margin: auto;
+}
+
+
+/*
+***************************************    
+**  Footer                           **
+***************************************
+*/
+.footer {
+	padding: 10px 0 0px 0;
+	color: #777;
+	border-top: 1px solid #98002e;
+}
+.footer .icons{
+	text-align: right;
+    margin-bottom:10px;
+}
+
+.footer .icons img{
+	width:70px;
+	margin:0 0px;
+}
+.footer .addr p{
+	padding: 0;
+	margin: 0;
+}
+
+
+/*
+***************************************    
+**  Recent Results                   **
+***************************************
+*/
+#recentResults {
+    margin: 0 auto;
+    background-color: #98002e;
+    margin-top: 20px;
+    padding: 0 0 5px 0;
+    color: #afa081;
+
+}
+#recentResults h3{
+    font-size: 15px;
+    font-weight: bold;
+    text-align: left;
+    color: #fff;
+    padding: 10px 10px 10px 10px;
+    margin: 0 0 5px 0;
+    background-image: url('bkgd.png');
+    text-transform: uppercase;
+}
+#recentResults a{
+    font-size: 11px;
+    color: #ffffff;	
+    display: block;
+    text-decoration: none;	
+    text-align: left;
+    padding: 5px 1px 5px 10px;
+}
+#recentResults a.row0{
+    background-color: #b20338;
+}
+#recentResults a:hover{
+    border-left: 10px solid #afa081;
+    padding-left: 10px;
+}
+span.pipe{
+    color: #afa081;
+}
+p.status{
+margin-left:10px;
+}
+
+
+/*
+***************************************    
+**  Twitter                          **
+***************************************
+*/
+#twitter {
+    margin: 10px auto 10px auto;
+}
+#twitter iframe {
+    width:100%;
+}
+
+
+/*
+***************************************    
+**  Willamette Links                 **
+***************************************
+*/
+#wu-links{
+    padding:10px 0 0 0;
+    text-align:center;
+}
+#wu-links img{
+    width:23%
+}
+
+
+
+
+
+
+.btn-primary {
+	margin:10px 0 0 15px;
+}
+
+
+
+
+
+
+
+
+/*
+***************************************    
+**  Styles Under 992px               **
+***************************************
+*/
+@media(max-width:992px) {
+	#twitter {
+		display: none;
+	}
+    #wu-links{
+        border-bottom:1px solid #98002e;
+        padding: 10px 0 10px 0;
+    }
+    
+	.header h3,.header h4,.header h5 {
+		text-align: center;
+	}
+	.footer .icons {
+		text-align: center;
+        margin:10px 0 0 0;
+		padding: 10px 0;
+	}
+    .footer .icons img{
+        width:10%;
+    }
+	.footer .addr p{
+		text-align: center;
+	}
+    .eventLinks {
+		text-align:center;
+	}
+}
+
+
+/*
+***************************************    
+**  Styles Under 768px               **
+***************************************
+*/
+@media(max-width:768px) {
+	body {
+		margin: 0;
+		padding:0;
+	}
+	/* Bigger button for smaller devices */
+	.eventLinks a{
+		font-size: 18px;
+		padding: 12px 2px;
+	}
+	#recentResults a {
+		font-size: 18px;	
+	}
+	#recentResults h3 {
+		font-size: 24px;	
+	}
+	#recentResults span.pipe{
+		font-size: 18px;
+	}
+
+}
+
+
+/*
+***************************************    
+**  Styles Under 625px               **
+***************************************
+*/
+@media(max-width:625px) {
+	* {
+		font-size:11px;
+    }
+	.eventLinks a {
+		width:100%;
+	}
+	#results h3{
+		font-size: 22px;
+		color: #98002e;
+	}
+	.header h3 {
+		font-size: 24px;
+	}
+	.header h4 {
+		font-size: 11px;
+	}
+	.header h5 {
+		font-size: 11px;
+	}
+
+
+}
+
+
+
+
+
+
+
+
+
