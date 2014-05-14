@@ -1,0 +1,33 @@
+<?
+	$title = "[$title]";
+	$event_name = "[$event_name]";
+    $name = "[$name]";
+    $timestamp = "[$timestamp]";
+    $type = 'Heat Sheets';
+?>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-stric.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<? include('includes/inc.head.php'); ?>
+</head>
+
+<body>
+<div id="container">
+<!-- event_results.html -->	
+	
+	<? include('includes/inc.header.php'); ?>
+
+	<h2>[$event_name] Heats</h2>	
+
+    <div id="eventResults">
+		[$results_tables]
+    </div>
+	
+	<div class="clearfix"></div>
+	<? include('includes/inc.footer.php'); ?>
+</div>
+	<? include('includes/inc.code.php'); ?>
+
+</body>
+</html>

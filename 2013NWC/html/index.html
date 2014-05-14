@@ -1,0 +1,24 @@
+<div id="results_links">
+	[$results_links]
+</div>
+<div id="scores">
+	<h2 class="title">Team Scores</h2>
+	[$scores]
+</div>
+<div id="heat_sheet_links">
+	[$heat_sheet_links]
+</div>
+<div id="performance_list_links">
+	[$performance_list_links]
+</div>
+
+
+<script>
+	$(document).ready(function(){
+		$("div#eventLinks a[href^='#']").hide();	
+		$('#scores .resultsTable tr>td:nth-child(3)').hide();
+		$('#scores .resultsTable tr>th:nth-child(3)').hide();
+		$('#scores .resultsTable th:contains("PL")').width(30);
+		$('#scores .resultsTable th:contains("Points")').width(40);		
+	});
+</script>
