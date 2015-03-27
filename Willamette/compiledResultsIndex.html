@@ -1,33 +1,200 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-stric.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>[$title]</title>
-<link rel="stylesheet" type="text/css" href="style.css" />
-<link rel="shortcut icon" href="http://images.tfmeetpro.com/icon-16x16.png"/>
-</head>
-<body>
-<div id="container">
-	<div id="header">
-    	<div class="pageTopInfo">
-        [$date]
-        </div>
-        <div class="pageTitle">
-        [$name]
-        </div>
-    </div>    
-[$scores]
-[$results_links]
-[$results]
-    <div id="footer">
-    	<div class="pageSummary">
-        	Results
-        </div>
-        <div class="pageDateStamp">
-        	[$timestamp]
-        </div>
-    </div>
-</div>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- compiledRersultsIndex.html -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>[$title]</title>
+      <style>
+    * {
+      font-family: Arial, sans-serif;
+      padding: 0px;
+      margin: 0px;
+    }
 
+    body {
+      margin: 0px;
+      font-size: 12px;
+      color:#0d1e3c;
+      background-color:#EEE;
+    }
+
+    #container {
+      margin: 0 auto 0 auto;
+      width:900px;
+      background-color:#fff;
+    }
+    #entries{
+      padding:10px;
+    }
+    .row {
+      clear: both;
+    }
+
+    /* footer */
+    #footer{
+      background-color: #98002e;
+      padding:10px;
+      margin-top:20px;
+    }
+
+
+    /* header */
+    #results, #links, #scores{
+      padding:10px 10px 10px 10px;
+      clear:both;
+    }
+    #header{
+    padding: 10px;
+    background-color: #98002e;
+    margin: 0;
+    }
+    #header h1{
+      color:#ffffff;
+      text-transform:uppercase;
+    }
+    #header h4{
+      color: #afa081;
+      font-weight:normal;
+      padding-bottom:2px;
+      font-size:14px;
+      margin:0;
+    }
+    #header h5{
+      color: #FFFFFF;
+    }
+
+
+
+    a {
+      color: #98012c;
+      text-decoration:none;
+    }
+    a:hover {
+      color:#999;
+    }
+
+    #links a {
+      float:left;
+      width:150px;
+      padding: 2px 0;
+
+    }
+    #links h3{
+      padding-top:10px;
+      clear:both;
+    }
+
+    .clearfix{
+      clear: both;
+    }
+
+    h2, .eventResults h3  {
+      color: #98012c;
+      font-size: 16px;
+      border-bottom:1px solid #afa081;
+      margin:20px 0 10px 0;
+    }
+    h3 {
+      font-size: 13px;
+    }
+    h4 {
+      margin-top:6px;
+    }
+    table {
+      width:100%;
+      border-collapse:collapse;
+    }
+    th {
+      text-align:left;
+      color:#fff;
+      background-color: #98002e;
+      padding:4px;
+    }
+    td{
+      border-bottom:1px solid #eee;
+      padding:4px;
+    }
+    .vertTable{
+    width: auto;
+    }
+
+    .vertTable th{
+      font-size:11px;
+      text-align: center;
+      background-color: #ccc;
+      color: #000;
+      padding: 1px 5px;
+      
+    }
+    .vertTable td{
+      font-size:11px;
+      text-align: center;
+      border: hidden;
+      padding: 1px 5px;
+    }
+    .hzTable {
+      width: auto;
+    }
+    .best-height {
+      background-color:Yellow;
+      }
+      
+    .table table tr td{
+      border-bottom: hidden;
+      border-left: 1px solid #ccc;
+      text-align: center;
+      width:33px;
+      font-size: 9px;
+    }
+    #scores .homeContainerLeft{
+      float:left;
+    }
+    #scores .homeContainerRight{
+      float:right;
+    }
+    #scores table{
+      width: 435px;
+    }
+  </style>
+
+  </head>
+  <!--DO NOT ERASE! VERSION:&MeetProTemplate_v1.0-->
+<body>
+  <div id="container">
+    
+    <div id="header">   
+        <h1>[$name] &mdash; Results</h1>
+        <h4>Charles Bowles Track | Willamette University | Salem, Oregon |</h4>
+        <h5>[$date]</h5>
+    </div>  
+ 
+
+    <div id="scores">  
+        [$scores]
+    </div>
+
+
+    <div id="links">
+        [$results_links_men]
+
+        [$results_links_women]
+    </div>
+
+
+    <div id="results">
+      [$results]
+    </div>
+
+
+    <div id="footer">
+
+
+    </div>
+
+  </div><!-- Container -->
 </body>
 </html>

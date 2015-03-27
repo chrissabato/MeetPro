@@ -32,6 +32,8 @@ $(document).ready(function(){
 	$('#scores  tr>th:nth-child(3)').hide();
 	$('#scores  th:contains("PL")').width(15);
 	$('#scores  th:contains("Points")').width(30);
+	$('#scores  h2:contains("Female Teams")').text("Women's Team Scores");
+	$('#scores  h2:contains("Male Teams")').text("Men's Team Scores");
 
 
 	// #################################################	

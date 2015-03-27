@@ -283,12 +283,10 @@ audio:not([controls])
 }
 	a
 {
-	color:#98002e;
 	text-decoration:none
 }
 	a:hover,a:focus
 {
-	color:#afa081;
 	text-decoration:underline
 }
 	a:focus
@@ -1603,7 +1601,7 @@ audio:not([controls])
 	table
 {
 	max-width:100%;
-	background-color:transparent
+
 }
 	th
 {
@@ -1624,9 +1622,6 @@ audio:not([controls])
 .table>thead>tr>th
 {
 	vertical-align:bottom;
-	background-color:#98002e;
-	color:#fff;
-	/*border-bottom:2px solid #dddddd*/
 }
 .table>caption+thead>tr:first-child>th,.table>colgroup+thead>tr:first-child>th,.table>thead:first-child>tr:first-child>th,.table>caption+thead>tr:first-child>td,.table>colgroup+thead>tr:first-child>td,.table>thead:first-child>tr:first-child>td
 {
@@ -2175,14 +2170,10 @@ audio:not([controls])
 }
 .btn-primary
 {
-	color:#ffffff;
-	background-color:#7b7b7b;
 
 }
 .btn-primary:hover,.btn-primary:focus,.btn-primary:active,.btn-primary.active,.open .dropdown-toggle.btn-primary
 {
-	color:#ffffff;
-	background-color:#98002e;
 
 }
 .btn-primary:active,.btn-primary.active,.open .dropdown-toggle.btn-primary
