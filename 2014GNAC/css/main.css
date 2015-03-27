@@ -1,0 +1,504 @@
+/*DO NOT ERASE! VERSION:&MeetProTemplate_v1.0*/
+/*document wide styles*/
+
+h4 {
+    text-transform:uppercase;
+}
+
+.bold-cell {
+    font-weight: bolder;
+}
+
+.fixed {
+    position:fixed;
+}
+
+.static {
+    position:static; 
+}
+
+.relative {
+    position:relative;
+}
+
+.gradient-row {
+    background: rgb(14,14,14); /* Old browsers */
+    background: -moz-linear-gradient(left, rgba(14,14,14,1) 0%, rgba(125,126,125,1) 61%,                            rgba(247,247,247,1) 93%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right top, color-                                        stop(0%,rgba(14,14,14,1)), color-stop(61%,rgba(125,126,125,1)), color-stop(93%,rgba(247,247,247,1))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(left, rgba(14,14,14,1) 0%,rgba(125,126,125,1) 61%,rgba(247,247,247,1) 93%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(left, rgba(14,14,14,1) 0%,rgba(125,126,125,1) 61%,rgba(247,247,247,1) 93%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(left, rgba(14,14,14,1) 0%,rgba(125,126,125,1) 61%,rgba(247,247,247,1) 93%); /* IE10+ */
+    background: linear-gradient(to right, rgba(14,14,14,1) 0%,rgba(125,126,125,1) 61%,rgba(247,247,247,1) 93%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0e0e0e', endColorstr='#f7f7f7',GradientType=1 ); /* IE6-9 */
+    color:#ffffff;
+}
+
+/*nav and meet header*/
+#meet-nav .nav-title {
+    background-color:white;
+}
+
+#meet-nav > div {
+    padding-left:0;
+}    
+
+#meet-nav h4 {
+    height:19px;
+    overflow-y:hidden;
+}    
+
+#meet-header {
+    position:relative;
+    top:30px;
+    z-index:100;
+}
+
+.m-info {
+    line-height:.8;
+}
+
+.m-officials {
+    line-height:.5;
+    margin-top:-30px
+}    
+
+.logo-cell {
+    background-color:white;
+    padding-right: 0;
+    float:right;
+    z-index:1031;
+}
+
+.logo-cell p {
+    padding:5px;   
+}
+
+#logo {
+    height:35px;
+    float:right;
+}
+
+/*navigation*/
+.sidebar {
+    display:block;
+    z-index: 1040;
+    left:83%;
+    background-color:white;
+}
+
+.affix-top {
+    position:absolute;
+    top:145px;
+}
+
+.affix-top .scroll-top {
+    display:none;
+}
+
+.affix {
+    top:41px;
+}    
+
+.affix .scroll-top {
+    display:block;
+}
+
+.event-list a {
+    font-size: 12px;
+    text-transform: capitalize;
+}
+
+.event-list .active {
+    background-color:#428bca;
+}
+
+.event-list .active:hover {
+    background-color:#428bca !important;
+}
+
+.event-list .active a {
+    color:white;
+}
+
+.event-list .active a:hover {
+    color:#000;   
+}
+
+#mob-menu /*button for menu*/ {
+    display:none;
+}
+
+#mob-ev-list ul {
+    display:none;
+    background-color:white;
+    text-align: center;
+}    
+
+/*event header*/
+
+.event-header {
+    padding-top:5px;
+    background-color:white;
+    z-index:1030;
+    margin-top:25px;
+}
+    
+.final-results {
+    letter-spacing: 5.5px;
+    text-align: center;
+    text-transform:uppercase;
+    padding-top:5px;
+    padding-bottom:2px
+}
+
+.event-header p {
+    line-height: .6666666666666666666666666667;
+    margin-top:8px;
+    margin-left:-10px;   
+}
+
+.ev-info {
+    margin:0;
+    border:2px solid black;
+} 
+
+    /*summary*/
+    .summary h4 {
+        padding-left:15px;
+        margin-left:-15px;
+    }
+   
+/*event*/
+.event {
+    height:auto;
+    position:relative;
+    margin-bottom:-94px;
+    padding-bottom: 94px;
+}
+
+
+    /*event results*/
+    .no-summary {
+        padding-top:10px;    
+    }
+    .results table td {
+        font-size:13px;
+        padding:2px 5px !important;
+    }
+
+    .results h4 {
+        padding-left:15px;
+        margin-left:-15px;
+        margin-top:0px;
+    }
+
+    .ind-results table {
+        margin-bottom:0px;    
+    }
+
+    /*tie breakers*/
+    .tiebreakers {
+        margin-left:10%;    
+    }
+    
+    .tiebreakers td {
+        padding:5px 40px;     
+    }
+        
+        .tiebreakers .inner-ties td {
+            padding:5px;
+        }
+
+        .tiebreakers .inner-ties .winners {
+            width:40px;
+            text-align: center;
+        }
+        
+        .tiebreakers .non-ncaa-winner {
+        	border:1px solid black;
+        }
+        
+        .tiebreakers .displacer-winner {
+        	background-color:black;
+        	color:white;
+        }    
+
+.btn.split-active, .btn.split-active:active, .split:hover {
+    background-color:black;
+    color:white;
+}
+
+/*sticky event header*/
+.stuck {
+    width:100%;
+    top:35px;
+    margin-top:0;
+}    
+
+/*table cell widths
+.team-standings {
+    width:28%;
+}
+
+.team-score {
+    width:8%;
+    text-align: center;
+}
+
+.scoring-order {
+    width:35%;
+}
+
+.total, .avg {
+    text-align: center;
+}
+
+.athlete-hdr {
+    width:40%;
+}    
+
+.ath-team {
+    width:27%;
+}    
+
+.ath-score {
+    width:8%;
+    text-align: center;
+}*/    
+
+
+/*team results table text alignment*/
+.total, .avg, .spread, .team-score,  {
+    text-align: center;
+}
+
+/*individual results text alignment*/
+.time, .gap, .ath-score, .avg-mile, .avg-km, .comp, .year {
+    text-align:center;
+}
+
+/*splits always smaller text*/
+td.splits {
+    font-size: 11px !important;
+    color:red;
+}    
+
+@media (max-width:992px){
+    .m-officials {
+        display:none;   
+    }
+    
+    #mob-menu /*button for menu*/ {
+        display:block;
+        position:fixed;
+        background-color:white;
+        z-index:1031;
+        left:81.6666666666666667%;
+        padding-top:2px;
+        padding-left:15px;
+        width:16.666666666666667%;
+    }
+    
+    #mob-menu button {
+        margin:0 15%;
+        width:70%;
+    }    
+
+    
+    .team-scores {
+        border:none;   
+        margin-bottom:20px;
+    }
+    
+    .ind-results {
+        padding-left:15px;
+    }    
+    
+    .ind-results h4 {
+        padding-left:20px;
+        margin-left:-20px;
+    }
+    
+    .splits {
+        display:none;
+    }
+    
+    .sidebar {
+        display:none;
+        top:35px;
+        width:265px;
+        margin-left: -100px;
+    }    
+}
+
+
+@media (max-width: 768px) {
+    .logo-cell, #logo {
+        float:none;
+    }
+
+    #mob-menu /*button for menu*/ {
+        top:0px;
+    }
+    
+    .nav-title {
+        padding-top:1px;
+    }
+    
+    #meet-header, .stuck {
+        top:63px;
+    }    
+    
+    #mob-ev-list {
+        margin-top:-20px;
+        z-index:1051;
+        max-height:100%;
+    }    
+    
+    #mob-ev-list ul {
+        display:block;
+        z-index: 1051;
+    }    
+    
+    .container-fluid > .event {
+        padding-top:35px;
+    }
+    
+    .container-fluid > .event ~ .event {
+        padding-top:0px;
+    }
+    
+    .ev-info p {
+        margin-top:9px;
+        line-height:1.333333333333333333333333;
+    }
+    
+     .scoring-order, .gap, .avg-mile, .avg-km, .spread, .finish-order, .splits {
+        display:none;
+    }
+}    
+
+@media (max-width:640px) {
+   
+    /*
+    .team-standings {
+        width:48%;
+    } 
+
+    .athlete-hdr {
+        width:45%;
+    }
+    
+    .ath-team {
+        width:30%;
+    } */  
+}
+
+@media (max-width:567px) {
+     
+    #mob-menu button {
+        margin:0;
+        width:100%;
+        font-size:12px;
+        padding:6px 8px;
+    }    
+    
+    .ev-info .col-xs-4 {
+        display:none;
+    }
+    
+    .ev-info .col-xs-8 {
+        width:100%;   
+    }    
+    
+    .final-results {
+        opacity:0;
+    }    
+    
+    .summary {
+        font-size: 11px;
+    }
+    
+    .results table td {
+        font-size:11px;
+        padding:2px !important;
+    }
+    
+    .year, .comp {
+        display:none;
+    }    
+}
+
+@media (max-width:350px) {
+    .results table td {
+        font-size:10px;
+    }
+    
+    .ev-info .col-xs-8 p:nth-child(2) {
+        font-size:12px;   
+    }   
+}    
+
+@media print {
+    a[href]:after {
+        content: none !important;
+    }
+    
+    #mob-menu {
+        display:none;
+    }
+    
+    #meet-nav {
+        position:absolute;
+        top:0px;
+    }
+    
+    #meet-header {
+        margin-bottom:1.5cm;
+    }  
+    
+    .m-info {
+        margin-top:-0.8cm;
+        width:7.8cm;    
+    }    
+    
+    .m-officials {
+        display:block;
+        position:absolute;
+        top:-0.9cm;
+        left:7.8cm;
+        width:5cm;
+    }    
+    
+    .fixed {
+        position:static !important;
+        margin-top:-2cm;
+    }
+    
+    .logo-cell, #logo {
+        float:right;    
+    }       
+    
+    .ev-info .col-xs-8 {
+        width:55%;   
+    }  
+    
+    .ev-info .col-xs-4 {
+        display:block;
+        width:45%;
+    }
+    
+    .final-results {
+        opacity:1;    
+    }    
+    
+    .ev-info p {
+        margin-top:8px;
+        line-height:0.8;
+    }
+    
+    .event {
+        padding-top:0cm;
+        page-break-after: always;   
+    }    
+}    

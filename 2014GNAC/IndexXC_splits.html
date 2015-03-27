@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <link rel="shortcut icon" href="">
+        <title>Results</title>
+
+        <!-- Bootstrap core CSS -->
+        <link href="[$bootstrap_css]" rel="stylesheet">
+         <link href="[$main_css]" rel="stylesheet">
+
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <!--DO NOT ERASE! VERSION:&MeetProTemplate_v1.2-->
+<body onload="updateSplitsTimer()">
+<header id="top"></header>    
+<div class="container-fluid">
+    <nav class="nav navbar-top" id="meet-nav">
+        <div class="col-sm-10">
+            <div class="col-sm-3 logo-cell">
+                <img id="logo" src="[$logo_src]" />
+            </div>
+            <div class="col-sm-6 nav-title" style="padding:0px">
+                    <h4>[$meet_title]</h4>
+            </div>
+        </div>
+        <div id="mob-menu">
+            <button type="button" class="btn btn-default" data-toggle="collapse" data-target="#mob-ev-list" onclick="menuButton()">
+                Go To
+            </button>
+        </div>
+        
+        <div id="mob-ev-list" class="collapse navbar-collapse"><ul class="nav navbar-nav event-list">[$event_links]</ul></div> 
+    </nav>
+    <div class="sidebar col-md-2 .hidden-print" data-spy="affix" data-offset-top="115"><ul class="nav event-list" role="tablist">[$event_links]</ul>[$to_top]</div>
+    
+    <div class="row" id="meet-header">
+        <div class="col-sm-4 col-md-5 m-info">
+            <p></p>
+            <p>[$location]</p>
+            <p>[$course]</p>
+            <p>[$course_cond]</p>
+            <p>[$host]</p>
+            <p>[$date]</p>
+        </div>
+        [$officials_div]
+    </div>
+    <!--splits button bars here-->
+    
+    [$events]
+
+</div><!--end container-fluid-->            
+    
+   
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="[$bootstrap_js]"></script>
+    <script type="text/javascript">
+        var split_events=new Array();
+        var old_split_events = new Array();
+        
+        $(document).ready(function() {
+            $('.event-list').first('li').addClass('active');
+            var $selected_event = $($('.event-list li').children().first().attr('href'));
+            $selected_event.show();
+            $selected_event.siblings('section').hide();
+           // var $selected_event = $($('.event-list li').children().first().attr('href'));
+            var $default_split = $selected_event.find('.split-events').children().first().children();
+            if($default_split) {
+                $default_split.addClass('split-active');
+                $default_split.click();
+            }
+        });
+        
+        $('.event-list li > a').click(function() {
+            event.preventDefault();
+            $(this).parent().addClass('active');
+            $(this).parent().siblings().removeClass('active');
+            var $selected_event = $($(this).attr('href'));
+            var $default_split = $selected_event.find('.split-events').children().first().children();
+            $selected_event.show();
+             if($default_split) {
+                $default_split.addClass('split-active');
+                $default_split.click();
+            }
+            $selected_event.siblings('.event').hide();
+            if($(this).parent().parent().parent().hasClass('in')) {
+                $('#mob-menu').collapse('hide');
+            } else if($(window).width() < 992) 
+                $('.sidebar').hide();
+            
+        });
+        
+        $('.split-events').children().click(function() {
+            event.preventDefault();
+            $(this).children().addClass('split-active');
+            var split_event_id = $(this).children().first().attr('value');
+            
+            $(this).siblings().children().removeClass('split-active');
+            var table = $('#split'+split_event_id).siblings('table');
+            $('#split'+split_event_id).siblings('table').hide();
+            $('#split'+split_event_id).show();
+            
+        });
+
+
+        function ajaxResultsCall() {
+            $.ajax({
+                type: 'GET',
+                dataType:'json',
+                data:{},
+                url:'splits.json',
+                success:function(data) {
+                    console.log(data.length);
+                    split_events = data;
+                    updateSplits();
+                }
+            });
+        }
+
+        function updateSplitsTimer() {
+            ajaxResultsCall()
+            var timer = setInterval(ajaxResultsCall, 5000);
+        }
+
+        function updateSplits() {
+            //ajaxResultsCall();
+            split_events.forEach(function(element, index, array) {
+                var $score_table = $($.find('#split'+element.split_event_id + ' tbody'));
+                $score_table.find('tr').removeClass('new-row');
+                var table_string = "";
+                var old_split_scores = new Array();
+                if(old_split_events.length && old_split_events[index].scores && old_split_events[index].scores.length) {
+                    old_split_scores = old_split_events[index].scores;
+                }
+                if(element.scores && element.scores.length) {
+                    scroll_splits = false;
+                    if(element.scores.length > 10) {scroll_splits = true;}
+                    element.scores.forEach(function(element, index, array) {
+                        var classString="";
+                        if (old_split_scores.length && old_split_scores[index].score != element.score) {
+                            classString = 'new-row';
+                        }
+                        table_string+="<tr class='"+classString+"'>";
+                        table_string+="<td class='place'>"+element.place+"</td>";
+                        table_string+="<td class='team'>"+element.team_name+"</td>";
+                        table_string+="<td class='score'>"+element.score+"</td>";
+                        table_string+="<td class='scoring-order'>"+element.breakdown+"</td>";
+                        table_string+="</tr>";
+
+                    });
+                }
+                $score_table.html(table_string);
+            });
+            old_split_events = split_events.slice(0);
+        }
+    </script>
+    </body>
+</html>
