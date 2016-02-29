@@ -8,7 +8,7 @@
 
 body {
 	margin: 0px;
-	background-color: #98002e;
+	background-color: #791716;
 	padding-top: 20px;
 	padding-bottom: 20px;
 }
@@ -25,24 +25,24 @@ body {
 */
 a {
 	text-decoration:none;
-	color: #98002e; 
+	color: #791716; 
 }
 
 a:hover{
 	text-decoration:underline;
-	color: #afa081;	
+	color: #c0ac7e;	
 }
 .boldCell{
 	font-weight:bold;	
 }
 .table>thead>tr>th{
-	background-color: #afa081;  
+	background-color: #c0ac7e;  
 	color: #fff;
 }
 .btn-primary
 {
 	color:#ffffff;
-	background-color:#afa081;
+	background-color:#c0ac7e;
 }
 .btn-primary:hover,.btn-primary:focus,.btn-primary:active,.btn-primary.active,.open .dropdown-toggle.btn-primary
 {
@@ -65,18 +65,18 @@ table {
 	padding: 5px 2px;
 	margin:0 2px 5px 0px;
 	text-align: center;
-	background-color: #afa081; 
+	background-color: #c0ac7e; 
 	color: #ffffff;
 }
 .eventLinks a:hover{
 	text-decoration:none;
-	background-color: #98002e; 
+	background-color: #791716; 
 	color: #ffffff;
 	background-image: url('bkgd.png');
 }
 .eventLinks h3 {
 	text-transform: uppercase;
-	color: #afa081; 
+	color: #c0ac7e; 
 	padding: 10px 0;
 	font-weight: normal;
     margin:10;
@@ -88,7 +88,7 @@ table {
 }
 .scheduleTitle {
 	font-size: 15px;
-	color: #afa081; 
+	color: #c0ac7e; 
 	font-weight: bold;
 }
 
@@ -150,7 +150,7 @@ table.hzTable {
 }
 #results div table:first-child td{
 	padding: 0 10px 0 10px;
-	border-left: 3px solid #afa081; 
+	border-left: 3px solid #c0ac7e; 
 
 }
 */
@@ -211,12 +211,12 @@ table.hzTable {
 	padding: 0;
 	font-size: 18px;
 	text-align: right;
-	color:#afa081;
+	color:#c0ac7e;
 }
 .header h5 {
 	margin: 0;
 	padding: 4px 0 10px 0;
-	color: #afa081;
+	color: #c0ac7e;
 	text-align: right;
 	font-size: 15px;
 	font-style: italic;
@@ -237,7 +237,7 @@ table.hzTable {
 .footer {
 	padding: 10px 0 0px 0;
 	color: #fff;
-	border-top: 1px solid #afa081; 
+	border-top: 1px solid #c0ac7e; 
 }
 .footer .icons{
 	text-align: right;
@@ -261,7 +261,7 @@ table.hzTable {
 */
 #recentResults {
     margin: 0 auto;
-    background-color: #afa081; 
+    background-color: #c0ac7e; 
     margin: 20px 0 10px 0;
     padding: 0 0 5px 0;
     color: #fff;
@@ -271,7 +271,7 @@ table.hzTable {
     font-size: 15px;
     font-weight: bold;
     text-align: left;
-    color: #98002e;
+    color: #791716;
     padding: 10px 10px 10px 10px;
     margin: 0 0 0 0;
     text-transform: uppercase;
@@ -285,14 +285,14 @@ table.hzTable {
     padding: 5px 1px 5px 10px;
 }
 #recentResults a.row0{
-    background-color: #a09173;
+    background-color: #a8956a;
 }
 #recentResults a:hover{
-    border-left: 10px solid #98002e; 
+    border-left: 10px solid #791716; 
     padding-left: 10px;
 }
 span.pipe{
-    color: #98002e; 
+    color: #791716; 
 }
 p.status{
 margin-left:10px;
@@ -339,7 +339,7 @@ margin-left:10px;
 	width: 100%;
 }
 #realtime p{
-	color: #98002e;
+	color: #791716;
 	font-size: 11px; 
 }
 
@@ -368,7 +368,7 @@ margin-left:10px;
 		display: none;
 	}
     #wu-links{
-        border-bottom:1px solid #afa081; 
+        border-bottom:1px solid #c0ac7e; 
         padding: 10px 0 10px 0;
     }
     
@@ -438,7 +438,7 @@ margin-left:10px;
 	}
 	#results h3{
 		font-size: 22px;
-		color: #afa081; 
+		color: #c0ac7e; 
 	}
 	.header h3 {
 		font-size: 24px;
