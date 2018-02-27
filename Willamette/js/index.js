@@ -32,22 +32,10 @@ $(document).ready(function(){
 	$('#scores  tr>th:nth-child(3)').hide();
 	$('#scores  th:contains("PL")').width(15);
 	$('#scores  th:contains("Points")').width(30);
-	$('#scores  h2:contains("Female Teams")').text("Women's Team Scores");
-	$('#scores  h2:contains("Male Teams")').text("Men's Team Scores");
+	$('.team-scores-hdr:contains("Female Teams")').text("Women");
+	$('.team-scores-hdr:contains("Male Teams")').text("Men");
 
 
-	// #################################################	
-	// Reformat index session table
-	// #################################################
-	$('.session-tables  tr>td:nth-child(3)').hide();
-	$('.session-tables  tr>th:nth-child(3)').hide();
-	$('.session-tables  th:contains("Start Time")').addClass("time");
-	$('.session-tables  th:contains("Results")').addClass("results");
-	$('.session-tables  th:contains("Start Lists")').addClass("results");
-	$('.session-tables  th:contains("Performance List")').addClass("results");
-
-	$('.session-tables  th:contains("Performance List")').text("Entries");
-	$('.session-tables  td:contains("Performance List") a').text("Entries");
 
 
 	// #################################################	
@@ -69,18 +57,6 @@ $(document).ready(function(){
 
 });
 
-
-// #################################################	
-// Woopra
-// #################################################
-(function(){
-    var t,i,e,n=window,o=document,a=arguments,s="script",r=["config","track","identify","visit","push","call"],c=function(){var t,i=this;for(i._e=[],t=0;r.length>t;t++)(function(t){i[t]=function(){return i._e.push([t].concat(Array.prototype.slice.call(arguments,0))),i}})(r[t])};for(n._w=n._w||{},t=0;a.length>t;t++)n._w[a[t]]=n[a[t]]=n[a[t]]||new c;i=o.createElement(s),i.async=1,i.src="//static.woopra.com/js/w.js",e=o.getElementsByTagName(s)[0],e.parentNode.insertBefore(i,e)
-})("woopra");
-
-woopra.config({
-    domain: 'live.willamettetrack.com'
-});
-woopra.track();
 
 
 

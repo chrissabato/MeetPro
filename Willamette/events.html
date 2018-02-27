@@ -1,4 +1,7 @@
 <!DOCTYPE html>
+<!--
+    This is a template page for an events report.
+-->
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -11,7 +14,6 @@
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/style.css" />
     <link rel="shortcut icon" href="http://images.tfmeetpro.com/icon-16x16.png"/>
-
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -21,23 +23,24 @@
   <!--DO NOT ERASE! VERSION:&MeetProTemplate_v1.3-->
   <body>
     <div class="container">
-      <div class="header">
-        <!-- your logo here-->
-        <a id="logo" href="http://www.tfmeetpro.com" target="_new"><img src="images/[$logo_src]" border=0></a>
-        <h3 class="text-muted">[$name]<span style="font-size: 12px;">[$town]</span><span style="font-size: 12px;">[$date]</span></h3>
-          <a href="index.html" class="home-link text-muted">&lt; Back</a>
-      </div>
-        
-        <h3 class="rosters-hdr">Rosters</h3>
-        <div class="row">         
-            <div class="col-md-12">
-            [$rosters_tables]
-            </div>
-        </div>    
-        <div class="footer">
-            [$timestamp]
-            <img src="images/DA_Logo.jpg">
+      <!--Bootstrap wrapper for the body of the webpage. Documentation @ http://getbootstrap.com/css-->
+      <!--Note that this header is constant throughout each page template-->      
+    <div class="header">
+      <!-- your logo here-->
+      <a id="logo" href="http://www.tfmeetpro.com" target="_new"><img src="images/[$logo_src]" border=0></a>
+      <!--the name of the meet and date of the meet are filled in here-->
+      <h3 class="text-muted">[$name]<span style="font-size: 12px;">[$town]</span><span style="font-size: 12px;">[$date]</span></h3>
+        <a href="index.html" class="home-link text-muted">&lt; Back</a>
+    </div>
+      <div class="row" style="min-height: 400px;">
+        <div class="col-md-12">
+          [$events_tables]
         </div>
+      </div>
+      <div class="footer">
+        [$timestamp]
+        <img src="images/DA_Logo.jpg">
+      </div>
     </div><!-- Container -->
-</body>
+  </body>
 </html>

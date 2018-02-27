@@ -53,6 +53,31 @@ a:hover{
 table {
 	background-color: #FFF;
 }
+a.home-link-hdr{
+	color: #fff;
+}
+a.home-link-hdr:hover{
+	text-decoration:none;
+}
+
+
+
+#scores .col-md-12{
+    padding: 0;    
+}
+
+#scores .team-scores-hdr{
+    color: #fff;
+}
+
+
+.pageDateStamp{
+	color: #c0ac7e;
+	text-align: right;
+	font-style: italic;
+	font-size: 11px;
+}
+
 /*
 ***************************************    
 **  Front Page Event Links           **
@@ -157,18 +182,19 @@ table.hzTable {
 
 /*
 ***************************************    
-**  Results: Vertical Field Series   **
+**  Results: Field Series / Splits   **
 ***************************************
 */
-.vertTable{
+.vertical-table, .horizontal-table, .splits-table{
 	border:none;
 	padding:0px;
 	margin:0px;
 	border-collapse:collapse;
+    background-color:transparent;
 	
 	
 }
-.vertTable th{
+.vertical-table th{
 	font-size: 10px;
 	background-color:#555;
 	color:#fff;
@@ -177,14 +203,23 @@ table.hzTable {
     width: 50px;
     font-weight:normal;
 }
-.vertTable td{
+.vertical-table td{
 	font-size: 10px;
     text-align:center;
     padding:2px 0;
 }
-.vertTable .best-height{
+.vertical-table .best-height{
 	background-color: yellow;
 }
+    
+
+.horizontal-table td, .splits-table td{
+	font-size: 10px;
+    text-align:center;
+    padding:0 10px;
+}
+
+
 
 
 /*
@@ -223,7 +258,7 @@ table.hzTable {
 }
 
 .header img.logo {
-	height: 90px;
+	width: 100%;
 	display: block;
 
 }
@@ -391,7 +426,6 @@ margin-left:10px;
 	}
     .header img.logo {
         margin:auto;
-        height:150px;
     }
 }
 
@@ -436,7 +470,7 @@ margin-left:10px;
 	.eventLinks a {
 		width:100%;
 	}
-	#results h3{
+	#results h3, .home-link-hdr{
 		font-size: 22px;
 		color: #c0ac7e; 
 	}

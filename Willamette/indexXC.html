@@ -1,23 +1,78 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-stric.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>[$title]</title>
-<link rel="stylesheet" type="text/css" href="style.css" />
-<link rel="shortcut icon" href="http://images.tfmeetpro.com/icon-16x16.png"/>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="">
+    <title>Results</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
 </head>
-<body>
-<div id="container">
-	<div id="header">
-    	<div class="pageTopInfo">[$date]</div>
-        <div class="pageTitle">[$name]</div>
-    </div>    
-[$results]
-    <div id="footer">
-    	<div class="pageSummary">Results</div>
-        <div class="pageDateStamp">[$timestamp]</div>
+
+<!--DO NOT ERASE! VERSION:&MeetProTemplate_v2.0-->
+<body data-spy="scroll" data-target=".sidebar">
+<header id="top"></header>
+<div class="container-fluid">
+    <nav class="nav navbar-fixed-top" id="meet-nav">
+        <div class="col-sm-10">
+            <div class="col-sm-3 logo-cell">
+                <img id="logo" src="images/[$logo_src]" />
+            </div>
+            <div class="col-sm-6 nav-title">
+                <h4>[$meet_title]</h4>
+            </div>
+        </div>
+        <div id="mob-menu">
+            <button type="button" class="btn btn-default" data-toggle="collapse" data-target="#mob-ev-list" onclick="menuButton()">
+                Go To
+            </button>
+        </div>
+
+        <div id="mob-ev-list" class="collapse navbar-collapse">
+        	<ul class="nav navbar-nav event-list">
+        		[$event_links]
+			</ul>
+		</div>
+    </nav>
+    <div class="sidebar col-md-2 .hidden-print" data-spy="affix" data-offset-top="115">
+    	<ul class="nav event-list" role="tablist">
+    		[$event_links]
+		</ul>
+		<a href="#top" class="scroll-top" onclick="return toTop()">Back to top</a>
+	</div>
+
+    <div class="row" id="meet-header">
+        <div class="col-sm-4 col-md-5 m-info">
+            <p></p>
+            <p>[$location]</p>
+            <p>[$course]</p>
+            <p>[$course_cond]</p>
+            <p>[$host]</p>
+            <p>[$date]</p>
+        </div>
+        [$officials_div]
     </div>
+    [$events]
 </div>
 
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/collision-scroll.min.js">
+
+
+</script>
 </body>
 </html>
